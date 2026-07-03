@@ -1,0 +1,41 @@
+import React from 'react';
+import Link from 'next/link';
+
+export default function Topbar() {
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+      <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+        <Link href="/" className="text-xl font-bold text-white tracking-tighter hover:text-cyan-400 transition-colors">
+          AM<span className="text-cyan-500">.</span>
+        </Link>
+        
+        <nav className="hidden md:flex items-center space-x-8">
+          <NavLink href="/thesis">Thesis</NavLink>
+          <NavLink href="/work_experience">Work Experience</NavLink>
+          <NavLink href="/projects">Projects</NavLink>
+        </nav>
+
+        {/* Mobile menu toggle (placeholder for now) */}
+        <button className="md:hidden text-slate-400 hover:text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12"/>
+            <line x1="4" x2="20" y1="6" y2="6"/>
+            <line x1="4" x2="20" y1="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+  );
+}
+
+function NavLink({ href, children }) {
+  return (
+    <Link 
+      href={href} 
+      className="text-sm font-medium text-slate-400 hover:text-cyan-400 transition-colors relative group"
+    >
+      {children}
+      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-500 transition-all duration-300 group-hover:w-full"></span>
+    </Link>
+  );
+}
