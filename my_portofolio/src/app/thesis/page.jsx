@@ -101,23 +101,28 @@ export default function ThesisPage() {
             <FindingCard 
               title="The Principle of Selective Encoding"
               description="Unlike static models (Word2Vec) that blindly polarize neutral professions, LLM2Vec models achieve selective encoding. They successfully place neutral professions at the center of the geometric space while preserving a robust gender dimension only where semantically necessary (e.g., Patriarch, Firewoman)."
+              href="#figure-7.6"
             />
             <FindingCard 
               title="Supervised SimCSE as the Optimal Strategy"
               description="The Supervised SimCSE training stage systematically achieves the greatest reduction in Direct Bias for neutral professions while maintaining clear semantic separation for inherently gendered words, outperforming both MNTP and Unsupervised approaches."
+              href="#figure-6.1"
             />
             <FindingCard 
               title="Robustness of PCA over Single Pairs"
               description="Traditional bias metrics relying on a single definitional pair (e.g., he-she) are unstable. Distributional methods—specifically Principal Component Analysis (PCA) and Mean Difference—are highly robust, with PCA explaining over 55% of the variance in the Supervised stage."
+              href="#pca-graph"
             />
             <FindingCard 
               title="The Scaling Paradox & Pruning as Denoising"
               description="Increasing model parameters provides capacity but does not automatically reduce bias. Interestingly, model pruning (Sheared-LLaMA-1.3B) acts as a drastic denoising mechanism, eliminating weak stereotypical parameters while preserving strong semantic gender structures."
+              href="#figure-8.1"
             />
             <div className="md:col-span-2">
               <FindingCard 
                 title="Systematic Asymmetry (The 'Female' Deviation)"
                 description="Across all evaluated architectures, there is a consistent geometric asymmetry: representations of the female gender systematically record higher Direct and Directional Bias compared to the male gender, meaning female terms deviate further from the neutral semantic axis."
+                href="#figure-7.4"
               />
             </div>
           </div>
@@ -133,30 +138,46 @@ export default function ThesisPage() {
           </div>
           
           <div className="grid grid-cols-1 gap-8">
-            <ThesisImageCard 
-              src="/thesis/bias_comparison_clean.png"
-              alt="Comparative bar chart of Direct Bias"
-              title="Comparative Analysis of Bias across Training Stages"
-              description={<><strong>Figure 6.1:</strong> Comparative bar chart of Direct Bias in Neutral Occupations across the three training stages (MNTP, Unsupervised SimCSE, Supervised SimCSE). We observe that while the Unsupervised stage (orange) often offers an improvement over MNTP (red), the Supervised strategy (blue) systematically achieves the optimal bias reduction across most models.</>}
-            />
-            <ThesisImageCard 
-              src="/thesis/directional_bias_polarity_dot.png"
-              alt="Polarity Analysis and Creation of Gender Dipole"
-              title="Polarity Analysis and Creation of Gender Dipole"
-              description={<><strong>Figure 7.4:</strong> Polarity Analysis and Creation of Gender Dipole (Directional Bias). The graph depicts the direction and position of the categories on the axis. BERT exhibits complete asymmetry (all points negative), whereas LLM2Vec models construct a robust semantic dipole (red on the left, blue on the right), concentrating neutral concepts (grey) very close to the absolute center (0.0).</>}
-            />
-            <ThesisImageCard 
-              src="/thesis/Neutral Gender Bias PCA.png"
-              alt="Stereotype Analysis in Neutral Sentences"
-              title="Stereotype Analysis in Neutral Sentences"
-              description={<><strong>Figure 7.6:</strong> Stereotype Analysis in Neutral Sentences. Dispersion of PCA values for neutral occupations. Occupations were ranked based on the average LLM scores. Overlaying the values for BERT and Word2Vec highlights the differences in stereotype encoding, as well as the common tendency of models to assign negative (female) values to specific occupations (e.g., nurse, housekeeper).</>}
-            />
-            <ThesisImageCard 
-              src="/thesis/architecture_size_impact.png"
-              alt="Impact of Size and Architecture on Gender Bias"
-              title="Impact of Size and Architecture on Gender Bias"
-              description={<><strong>Figure 8.1:</strong> Comparative visualization of Direct Bias (PCA) for Neutral, Male, and Female categories across models of different sizes (1.3B to 8.1B). Observations: (1) The Female category (red) consistently shows a higher value regardless of size, indicating strong encoding. (2) The Sheared-LLaMA-1.3B model achieves lower Neutral Bias than larger models (e.g., Llama-3.2), highlighting the importance of structural optimization (pruning) over the absolute number of parameters.</>}
-            />
+            <div id="pca-graph" className="scroll-mt-32">
+              <ThesisImageCard 
+                src="/thesis/mean_pca_avg.png"
+                alt="Comparison of mean Direct Bias by axis construction method"
+                title="Comparison of Axis Construction Methods"
+                description={<><strong>Figure 5.1:</strong> Comparison of mean Direct Bias per axis construction method exclusively for explicitly gendered categories (Male, Female). The he-she method (green bar) demonstrates a significantly reduced capacity to project gender information compared to distributional methods (Mean, PCA).</>}
+              />
+            </div>
+            <div id="figure-6.1" className="scroll-mt-32">
+              <ThesisImageCard 
+                src="/thesis/bias_comparison_clean.png"
+                alt="Comparative bar chart of Direct Bias"
+                title="Comparative Analysis of Bias across Training Stages"
+                description={<><strong>Figure 6.1:</strong> Comparative bar chart of Direct Bias in Neutral Occupations across the three training stages (MNTP, Unsupervised SimCSE, Supervised SimCSE). We observe that while the Unsupervised stage (orange) often offers an improvement over MNTP (red), the Supervised strategy (blue) systematically achieves the optimal bias reduction across most models.</>}
+              />
+            </div>
+            <div id="figure-7.4" className="scroll-mt-32">
+              <ThesisImageCard 
+                src="/thesis/directional_bias_polarity_dot.png"
+                alt="Polarity Analysis and Creation of Gender Dipole"
+                title="Polarity Analysis and Creation of Gender Dipole"
+                description={<><strong>Figure 7.4:</strong> Polarity Analysis and Creation of Gender Dipole (Directional Bias). The graph depicts the direction and position of the categories on the axis. BERT exhibits complete asymmetry (all points negative), whereas LLM2Vec models construct a robust semantic dipole (red on the left, blue on the right), concentrating neutral concepts (grey) very close to the absolute center (0.0).</>}
+              />
+            </div>
+            <div id="figure-7.6" className="scroll-mt-32">
+              <ThesisImageCard 
+                src="/thesis/Neutral Gender Bias PCA.png"
+                alt="Stereotype Analysis in Neutral Sentences"
+                title="Stereotype Analysis in Neutral Sentences"
+                description={<><strong>Figure 7.6:</strong> Stereotype Analysis in Neutral Sentences. Dispersion of PCA values for neutral occupations. Occupations were ranked based on the average LLM scores. Overlaying the values for BERT and Word2Vec highlights the differences in stereotype encoding, as well as the common tendency of models to assign negative (female) values to specific occupations (e.g., nurse, housekeeper).</>}
+              />
+            </div>
+            <div id="figure-8.1" className="scroll-mt-32">
+              <ThesisImageCard 
+                src="/thesis/architecture_size_impact.png"
+                alt="Impact of Size and Architecture on Gender Bias"
+                title="Impact of Size and Architecture on Gender Bias"
+                description={<><strong>Figure 8.1:</strong> Comparative visualization of Direct Bias (PCA) for Neutral, Male, and Female categories across models of different sizes (1.3B to 8.1B). Observations: (1) The Female category (red) consistently shows a higher value regardless of size, indicating strong encoding. (2) The Sheared-LLaMA-1.3B model achieves lower Neutral Bias than larger models (e.g., Llama-3.2), highlighting the importance of structural optimization (pruning) over the absolute number of parameters.</>}
+              />
+            </div>
           </div>
         </section>
 

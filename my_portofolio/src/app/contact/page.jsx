@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Mail, ChevronRight } from 'lucide-react';
+import { Mail, ChevronRight, FileDown } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../../components/Icons';
 
 export default function ContactPage() {
@@ -27,7 +27,7 @@ export default function ContactPage() {
         </section>
 
         {/* CONTACT CARDS */}
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-8">
           <ContactCard 
             href="mailto:alexmilcs@gmail.com"
             icon={<Mail className="w-8 h-8 text-yellow-400" />}
@@ -45,6 +45,12 @@ export default function ContactPage() {
             icon={<GithubIcon className="w-8 h-8 text-white" />}
             title="GitHub"
             subtitle="Check out my code"
+          />
+          <ContactCard 
+            href="/Alex_Mil_CV_en.pdf"
+            icon={<FileDown className="w-8 h-8 text-slate-300 group-hover:text-yellow-400 transition-colors" />}
+            title="Resume"
+            subtitle="Download my resume"
           />
         </section>
       </main>

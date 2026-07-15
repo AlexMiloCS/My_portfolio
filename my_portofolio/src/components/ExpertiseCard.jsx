@@ -1,6 +1,6 @@
-export default function ExpertiseCard({ icon, title, description, philosophy }) {
+export default function ExpertiseCard({ icon, title, description, skills, philosophy }) {
   return (
-    <div className="group relative h-[320px] w-full [perspective:1000px] cursor-pointer">
+    <div className="group relative h-[280px] w-full [perspective:1000px] cursor-pointer">
       <div className="absolute inset-0 w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
         
         {/* FRONT FACE */}
@@ -12,9 +12,25 @@ export default function ExpertiseCard({ icon, title, description, philosophy }) 
             {icon}
           </div>
           <h4 className="text-xl font-bold text-white mb-3">{title}</h4>
-          <p className="text-slate-300 leading-relaxed text-sm">
-            {description}
-          </p>
+          {skills ? (
+            <div className="flex flex-wrap gap-2 mt-2">
+              {skills.map((skill, idx) => (
+                <div 
+                  key={idx} 
+                  className="group/skill flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-semibold tracking-wide bg-slate-950/80 text-slate-300 border border-slate-800 rounded-lg shadow-sm transition-all duration-300 hover:border-slate-600 hover:bg-slate-900"
+                >
+                  <skill.icon size={14} color={skill.color || 'currentColor'} className="shrink-0 opacity-80 group-hover/skill:opacity-100 transition-opacity" />
+                  <span className="group-hover/skill:text-white transition-colors duration-300">
+                    {skill.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="text-slate-300 leading-relaxed text-sm">
+              {description}
+            </p>
+          )}
         </div>
 
         {/* BACK FACE */}

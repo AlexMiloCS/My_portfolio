@@ -14,6 +14,7 @@ export default function Topbar() {
           <NavLink href="/work_experience">Work Experience</NavLink>
           <NavLink href="/projects">Projects</NavLink>
           <NavLink href="/contact">Contact Me</NavLink>
+          <NavLink href="/Alex_Mil_CV_en.pdf" target="_blank" rel="noopener noreferrer">Resume</NavLink>
         </nav>
 
         <Link href="/" className="hidden md:flex md:absolute md:right-6 text-slate-400 hover:text-yellow-400 transition-colors" aria-label="Home">
@@ -33,10 +34,11 @@ export default function Topbar() {
   );
 }
 
-function NavLink({ href, children }) {
+function NavLink({ href, children, ...props }) {
   return (
     <Link 
       href={href} 
+      {...props}
       className="text-sm font-medium text-slate-400 hover:text-yellow-400 transition-colors relative group"
     >
       {children}
