@@ -1,11 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
+import { Home } from 'lucide-react';
 
 export default function Topbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
-      <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold text-white tracking-tighter hover:text-yellow-400 transition-colors flex items-center">
+      <div className="max-w-6xl mx-auto px-6 h-20 relative flex items-center justify-between md:justify-center">
+        <Link href="/" className="md:absolute md:left-6 text-xl font-bold text-white tracking-tighter hover:text-yellow-400 transition-colors flex items-center">
           <span className="text-yellow-400 mr-1 italic">//</span>AM
         </Link>
         
@@ -13,7 +14,12 @@ export default function Topbar() {
           <NavLink href="/thesis">Thesis</NavLink>
           <NavLink href="/work_experience">Work Experience</NavLink>
           <NavLink href="/projects">Projects</NavLink>
+          <NavLink href="/contact">Contact Me</NavLink>
         </nav>
+
+        <Link href="/" className="hidden md:flex md:absolute md:right-6 text-slate-400 hover:text-yellow-400 transition-colors" aria-label="Home">
+          <Home className="w-5 h-5" />
+        </Link>
 
         {/* Mobile menu toggle (placeholder for now) */}
         <button className="md:hidden text-slate-400 hover:text-white">

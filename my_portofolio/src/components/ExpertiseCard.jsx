@@ -12,7 +12,7 @@ export default function ExpertiseCard({ icon, title, description, philosophy }) 
             {icon}
           </div>
           <h4 className="text-xl font-bold text-white mb-3">{title}</h4>
-          <p className="text-slate-400 leading-relaxed text-sm">
+          <p className="text-slate-300 leading-relaxed text-sm">
             {description}
           </p>
         </div>

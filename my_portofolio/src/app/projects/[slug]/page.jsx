@@ -15,7 +15,7 @@ export default async function ProjectDetailsPage({ params }) {
   }
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-200 selection:bg-cyan-500/30 font-sans">
+    <div className="min-h-screen text-slate-200 selection:bg-cyan-500/30 font-sans pb-24">
       <main className="max-w-4xl mx-auto px-6 py-12 md:py-24 space-y-16 animate-in fade-in slide-in-from-bottom-8 duration-1000">
         
         {/* Back Navigation */}

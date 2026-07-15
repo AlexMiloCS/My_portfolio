@@ -7,7 +7,7 @@ import ThesisImageCard from '../../components/thesis/ThesisImageCard';
 
 export default function ThesisPage() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-200 selection:bg-yellow-500/30 font-sans pb-24">
+    <div className="min-h-screen text-slate-200 selection:bg-cyan-500/30 font-sans pb-24">
       <main className="max-w-6xl mx-auto px-6 py-12 md:py-24 space-y-20 animate-in fade-in slide-in-from-bottom-8 duration-1000">
         
         {/* Breadcrumbs */}
