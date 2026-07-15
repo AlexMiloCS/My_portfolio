@@ -4,6 +4,7 @@ import React from 'react';
 export const projects = [
   {
     slug: 'food-hazard-nlp',
+    category: 'academic',
     featured: false,
     title: 'Food Hazard NLP Classification (SemEval-2025)',
     description: 'Developed an ensemble classification system (BERT, RoBERTa, SVM) to predict heavily imbalanced hazard categories from unstructured recall reports. Optimized hierarchical macro-F1 across 32 classes, outperforming classical ML baselines.',
@@ -16,6 +17,7 @@ export const projects = [
   },
   {
     slug: 'KindOfMinesweeper',
+    category: 'academic',
     featured: false,
     title: 'Kind of Minesweeper',
     description: 'A custom, console-based Java game that flips the rules of classic Minesweeper into a competitive 2-player hunting game. Engineered with live score tracking, a smart grid system for adjacent mine calculation, and turn-based gameplay logic.',
@@ -28,6 +30,7 @@ export const projects = [
   },
   {
     slug: 'pathfinding-algorithms',
+    category: 'academic',
     featured: false,
     title: 'Pathfinding Algorithms: A* & UCS',
     description: 'A Java-based application that generates randomized labyrinths to visualize and compare pathfinding algorithms. Evaluates optimal cost-effective paths using Uniform Cost Search (UCS) and A* heuristic evaluation for comparative node expansion analysis.',
@@ -40,6 +43,7 @@ export const projects = [
   },
   {
     slug: 'kmeans-clustering',
+    category: 'academic',
     featured: false,
     title: 'K-Means Clustering Visualization in Java',
     description: 'A custom Java implementation of the K-Means clustering algorithm featuring synthetic spatial data generation and JFreeChart visualizations.',
@@ -52,6 +56,7 @@ export const projects = [
   },
   {
     slug: 'morris-counter',
+    category: 'academic',
     featured: false,
     title: 'Morris Counter Analysis',
     description: 'A Python implementation and statistical analysis of the Morris Counter, a probabilistic data structure for approximate counting. Includes multi-counter and generalized base variants.',
@@ -64,6 +69,7 @@ export const projects = [
   },
   {
     slug: 'prufer-cryptography',
+    category: 'academic',
     featured: false,
     title: 'Prüfer Sequence Cryptography',
     description: 'A Python implementation that secures a communication network (represented as a tree graph) by encoding it into a Prüfer sequence and encrypting it.',

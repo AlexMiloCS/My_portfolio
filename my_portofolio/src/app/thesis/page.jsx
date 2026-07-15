@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cpu, ChevronRight, BookOpen, Code, Scale, Image as ImageIcon } from 'lucide-react';
+import { Cpu, ChevronRight, ChevronLeft, BookOpen, Code, Scale, Image as ImageIcon } from 'lucide-react';
 import { GithubIcon } from '../../components/Icons';
 import Link from 'next/link';
 import FindingCard from '../../components/thesis/FindingCard';
@@ -10,12 +10,24 @@ export default function ThesisPage() {
     <div className="min-h-screen text-slate-200 selection:bg-cyan-500/30 font-sans pb-24">
       <main className="max-w-6xl mx-auto px-6 py-12 md:py-24 space-y-20 animate-in fade-in slide-in-from-bottom-8 duration-1000">
         
-        {/* Breadcrumbs */}
-        <nav className="flex text-sm text-slate-400">
-          <Link href="/" className="hover:text-yellow-400 transition-colors">Home</Link>
-          <ChevronRight className="w-4 h-4 mx-2 text-slate-600" />
-          <span className="text-white font-medium">Master's Thesis</span>
-        </nav>
+        {/* Breadcrumbs and Navigation */}
+        <div className="flex items-center justify-between">
+          <nav className="flex items-center text-sm text-slate-400">
+            <Link href="/" className="hover:text-yellow-400 transition-colors">Home</Link>
+            <ChevronRight className="w-4 h-4 mx-2 text-slate-600" />
+            <Link href="/projects" className="hover:text-yellow-400 transition-colors">Projects</Link>
+            <ChevronRight className="w-4 h-4 mx-2 text-slate-600" />
+            <span className="text-white font-medium">Master's Thesis</span>
+          </nav>
+
+          <Link 
+            href="/projects" 
+            className="hidden sm:flex items-center text-sm font-medium text-slate-400 hover:text-yellow-400 transition-all bg-slate-900/40 hover:bg-slate-900 px-4 py-2 rounded-full border border-slate-800 hover:border-yellow-400/50"
+          >
+            <ChevronLeft className="w-4 h-4 mr-1" />
+            Back to Projects
+          </Link>
+        </div>
 
         {/* Hero & Abstract */}
         <section className="space-y-8">

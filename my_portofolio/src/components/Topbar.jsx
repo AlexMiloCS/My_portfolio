@@ -11,7 +11,6 @@ export default function Topbar() {
         </Link>
         
         <nav className="hidden md:flex items-center space-x-8">
-          <NavLink href="/thesis">Thesis</NavLink>
           <NavLink href="/work_experience">Work Experience</NavLink>
           <NavLink href="/projects">Projects</NavLink>
           <NavLink href="/contact">Contact Me</NavLink>
