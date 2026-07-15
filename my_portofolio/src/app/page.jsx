@@ -5,6 +5,7 @@ import ExpertiseCard from '../components/ExpertiseCard';
 import ProjectCard from '../components/ProjectCard';
 import SocialLink from '../components/SocialLink';
 import { GithubIcon, LinkedinIcon } from '../components/Icons';
+import { projects } from '../data/projects';
 import { 
   Terminal, 
   Database, 
@@ -105,22 +106,24 @@ export default function Portfolio() {
         <section id="projects" className="space-y-12">
           <div className="space-y-4">
             <h3 className="text-3xl font-bold text-white flex items-center">
-              <span className="text-cyan-400 mr-3">02.</span> Selected Projects
+              <span className="text-cyan-400 mr-3">02.</span> Featured Projects
             </h3>
             <div className="h-1 w-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl">
-
-            <ProjectCard 
-              title="Food Hazard NLP Classification (SemEval-2025)"
-              description="Developed an ensemble classification system (BERT, RoBERTa, SVM) to predict heavily imbalanced hazard categories from unstructured recall reports. Optimized hierarchical macro-F1 across 32 classes, outperforming classical ML baselines."
-              tags={['BERT', 'RoBERTa', 'Scikit-learn', 'Classification']}
-              githubLink="https://github.com/AlexMiloCS"
-              liveLink="#"
-              imagePlaceholder="bg-gradient-to-br from-cyan-900/40 to-slate-900"
-              icon={<Database className="w-8 h-8 text-slate-400 group-hover:text-blue-400 transition-colors" />}
-            />
+            {projects.filter(p => p.featured).map(project => (
+              <ProjectCard 
+                key={project.slug}
+                slug={project.slug}
+                title={project.title}
+                description={project.description}
+                tags={project.tags}
+                githubLink={project.githubLink}
+                imagePlaceholder={project.imagePlaceholder}
+                icon={project.icon}
+              />
+            ))}
           </div>
           
           <div className="pt-4">

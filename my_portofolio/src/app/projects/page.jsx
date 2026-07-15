@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import { ChevronRight, LayoutTemplate, Database } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import ProjectCard from '../../components/ProjectCard';
+import { projects } from '../../data/projects';
 
 export default function ProjectsPage() {
   return (
@@ -27,17 +28,18 @@ export default function ProjectsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl pt-8">
-
-            <ProjectCard 
-              title="Food Hazard NLP Classification (SemEval-2025)"
-              description="Developed an ensemble classification system (BERT, RoBERTa, SVM) to predict heavily imbalanced hazard categories from unstructured recall reports. Optimized hierarchical macro-F1 across 32 classes, outperforming classical ML baselines."
-              tags={['BERT', 'RoBERTa', 'Scikit-learn', 'Classification']}
-              githubLink="https://github.com/AlexMiloCS"
-              liveLink="#"
-              imagePlaceholder="bg-gradient-to-br from-cyan-900/40 to-slate-900"
-              icon={<Database className="w-8 h-8 text-slate-400 group-hover:text-blue-400 transition-colors" />}
-            />
-            {/* Future projects can be mapped here */}
+            {projects.map(project => (
+              <ProjectCard 
+                key={project.slug}
+                slug={project.slug}
+                title={project.title}
+                description={project.description}
+                tags={project.tags}
+                githubLink={project.githubLink}
+                imagePlaceholder={project.imagePlaceholder}
+                icon={project.icon}
+              />
+            ))}
           </div>
         </section>
       </main>

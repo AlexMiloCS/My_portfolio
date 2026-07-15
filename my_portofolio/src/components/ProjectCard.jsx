@@ -1,12 +1,13 @@
-import { ExternalLink } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import { GithubIcon } from './Icons';
 
 export default function ProjectCard({ 
+  slug,
   title, 
   description, 
   tags, 
   githubLink, 
-  liveLink,
   imagePlaceholder,
   icon
 }) {
@@ -41,11 +42,11 @@ export default function ProjectCard({
               Source
             </a>
           )}
-          {liveLink && (
-            <a href={liveLink} className="flex items-center text-sm font-medium text-cyan-400 hover:text-cyan-300 transition-colors">
-              <ExternalLink className="w-4 h-4 mr-2" />
-              Live Demo
-            </a>
+          {slug && (
+            <Link href={`/projects/${slug}`} className="flex items-center text-sm font-bold text-cyan-400 hover:text-cyan-300 transition-colors group">
+              View Details
+              <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+            </Link>
           )}
         </div>
       </div>
