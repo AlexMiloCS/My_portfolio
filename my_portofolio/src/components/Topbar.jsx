@@ -5,8 +5,8 @@ export default function Topbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold text-white tracking-tighter hover:text-cyan-400 transition-colors">
-          AM<span className="text-cyan-500">.</span>
+        <Link href="/" className="text-xl font-bold text-white tracking-tighter hover:text-yellow-400 transition-colors flex items-center">
+          <span className="text-yellow-400 mr-1 italic">//</span>AM
         </Link>
         
         <nav className="hidden md:flex items-center space-x-8">
@@ -32,10 +32,10 @@ function NavLink({ href, children }) {
   return (
     <Link 
       href={href} 
-      className="text-sm font-medium text-slate-400 hover:text-cyan-400 transition-colors relative group"
+      className="text-sm font-medium text-slate-400 hover:text-yellow-400 transition-colors relative group"
     >
       {children}
-      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-500 transition-all duration-300 group-hover:w-full"></span>
+      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
     </Link>
   );
 }

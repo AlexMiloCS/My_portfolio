@@ -7,12 +7,12 @@ import ThesisImageCard from '../../components/thesis/ThesisImageCard';
 
 export default function ThesisPage() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-200 selection:bg-cyan-500/30 font-sans pb-24">
+    <div className="min-h-screen bg-slate-950 text-slate-200 selection:bg-yellow-500/30 font-sans pb-24">
       <main className="max-w-6xl mx-auto px-6 py-12 md:py-24 space-y-20 animate-in fade-in slide-in-from-bottom-8 duration-1000">
         
         {/* Breadcrumbs */}
         <nav className="flex text-sm text-slate-400">
-          <Link href="/" className="hover:text-cyan-400 transition-colors">Home</Link>
+          <Link href="/" className="hover:text-yellow-400 transition-colors">Home</Link>
           <ChevronRight className="w-4 h-4 mx-2 text-slate-600" />
           <span className="text-white font-medium">Master's Thesis</span>
         </nav>
@@ -20,13 +20,13 @@ export default function ThesisPage() {
         {/* Hero & Abstract */}
         <section className="space-y-8">
           <div className="inline-block p-4 bg-slate-900 rounded-2xl border border-slate-800 mb-2">
-            <Cpu className="w-10 h-10 text-cyan-400" />
+            <Cpu className="w-10 h-10 text-yellow-400" />
           </div>
           <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
               Bias Measurement in LLM2Vec Embeddings
             </h1>
-            <h2 className="text-xl md:text-2xl text-purple-400 font-medium">
+            <h2 className="text-xl md:text-2xl text-orange-400 font-medium">
               Μέτρηση προκατάληψης σε LLM2Vec αναπαραστάσεις
             </h2>
           </div>
@@ -42,32 +42,32 @@ export default function ThesisPage() {
           
           <div className="flex flex-wrap gap-3 pt-2">
             {['Python', 'PyTorch', 'LLM2Vec', 'NLP', 'AI Fairness', 'PCA', 'LLaMA', 'Mistral', 'Gender Bias', 'AI Ethics', 'Text Embeddings', 'Bias Measurement', 'SimCSE', 'Large Language Models'].map(tag => (
-              <span key={tag} className="px-4 py-1.5 text-sm font-medium text-cyan-300 bg-cyan-950/50 border border-cyan-900/50 rounded-full shadow-sm">
+              <span key={tag} className="px-4 py-1.5 text-sm font-medium text-yellow-300 bg-yellow-950/50 border border-yellow-900/50 rounded-full shadow-sm">
                 {tag}
               </span>
             ))}
           </div>
           
           <div className="pt-6 border-t border-slate-800/80 flex flex-wrap gap-4">
-            <a href="https://github.com/AlexMiloCS/LLM2Vec_Thesis" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 font-semibold text-slate-900 bg-cyan-400 rounded-xl hover:bg-cyan-300 transition-colors hover:shadow-[0_0_20px_-5px_rgba(6,182,212,0.5)]">
+            <a href="https://github.com/AlexMiloCS/LLM2Vec_Thesis" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 font-semibold text-slate-900 bg-yellow-400 rounded-xl hover:bg-yellow-300 transition-colors hover:shadow-[0_0_20px_-5px_rgba(250,204,21,0.5)]">
               <GithubIcon className="w-5 h-5 mr-2" />
               View Repository
             </a>
             <a href="/thesis/Thesis_final.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 font-semibold text-white bg-slate-800 rounded-xl hover:bg-slate-700 transition-colors border border-slate-700">
-              <BookOpen className="w-5 h-5 mr-2 text-cyan-400" />
+              <BookOpen className="w-5 h-5 mr-2 text-yellow-400" />
               Read Full Thesis (Greek PDF)
             </a>
           </div>
         </section>
 
         {/* Impact on Inclusivity */}
-        <section className="p-8 md:p-10 rounded-3xl bg-gradient-to-br from-purple-900/20 to-cyan-900/20 border border-slate-800 relative overflow-hidden">
+        <section className="p-8 md:p-10 rounded-3xl bg-gradient-to-br from-orange-900/20 to-yellow-900/20 border border-slate-800 relative overflow-hidden">
           <div className="absolute -top-10 -right-10 p-8 opacity-5">
-            <Scale className="w-64 h-64 text-cyan-400" />
+            <Scale className="w-64 h-64 text-yellow-400" />
           </div>
           <div className="relative z-10 space-y-4 max-w-4xl">
             <h2 className="text-2xl font-bold text-white flex items-center">
-              <Scale className="w-6 h-6 mr-3 text-purple-400" />
+              <Scale className="w-6 h-6 mr-3 text-orange-400" />
               Impact on AI Fairness & Inclusivity
             </h2>
             <p className="text-slate-300 leading-relaxed text-lg">
@@ -80,15 +80,15 @@ export default function ThesisPage() {
         <section className="space-y-8">
           <div className="space-y-4">
             <h2 className="text-3xl font-bold text-white flex items-center">
-              <span className="text-cyan-400 mr-3">01.</span> Key Findings
+              <span className="text-yellow-400 mr-3">01.</span> Key Findings
             </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full"></div>
+            <div className="h-1 w-20 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <FindingCard 
               title="The Principle of Selective Encoding"
-              description="Unlike static models (Word2Vec) that blindly polarize neutral professions, LLM2Vec models achieve optimal selective encoding. They successfully place neutral professions at the center of the geometric space while preserving a robust gender dimension only where semantically necessary (e.g., Patriarch, Firewoman)."
+              description="Unlike static models (Word2Vec) that blindly polarize neutral professions, LLM2Vec models achieve selective encoding. They successfully place neutral professions at the center of the geometric space while preserving a robust gender dimension only where semantically necessary (e.g., Patriarch, Firewoman)."
             />
             <FindingCard 
               title="Supervised SimCSE as the Optimal Strategy"
@@ -115,9 +115,9 @@ export default function ThesisPage() {
         <section className="space-y-8">
           <div className="space-y-4">
             <h2 className="text-3xl font-bold text-white flex items-center">
-              <span className="text-cyan-400 mr-3">02.</span> Visualizations
+              <span className="text-yellow-400 mr-3">02.</span> Visualizations
             </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full"></div>
+            <div className="h-1 w-20 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full"></div>
           </div>
           
           <div className="grid grid-cols-1 gap-8">
@@ -153,20 +153,20 @@ export default function ThesisPage() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-3xl font-bold text-white flex items-center">
-                <span className="text-cyan-400 mr-3">03.</span> Architecture
+                <span className="text-yellow-400 mr-3">03.</span> Architecture
               </h2>
-              <div className="h-1 w-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full"></div>
+              <div className="h-1 w-20 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full"></div>
             </div>
             
             <div className="space-y-4 bg-slate-900/50 p-6 rounded-2xl border border-slate-800">
-              <h3 className="text-white font-bold flex items-center mb-4"><Code className="w-5 h-5 mr-2 text-purple-400"/> Repository Structure</h3>
+              <h3 className="text-white font-bold flex items-center mb-4"><Code className="w-5 h-5 mr-2 text-orange-400"/> Repository Structure</h3>
               <ul className="space-y-3 text-slate-400 text-sm">
-                <li><strong className="text-cyan-300">src/</strong>: Core Python modules and tools.</li>
-                <li><strong className="text-cyan-300">llm2vec/</strong>: Execution notebooks utilizing LLM2Vec methodology.</li>
-                <li><strong className="text-cyan-300">w2v/ & bert/</strong>: Baseline execution notebooks.</li>
-                <li><strong className="text-cyan-300">tools/</strong>: Utility scripts for calculating bias and manipulating models.</li>
-                <li><strong className="text-cyan-300">datasets/</strong>: Datasets containing protected attributes and professions.</li>
-                <li><strong className="text-cyan-300">Results/</strong>: Generated logs, tables, and visualization plots.</li>
+                <li><strong className="text-yellow-300">src/</strong>: Core Python modules and tools.</li>
+                <li><strong className="text-yellow-300">llm2vec/</strong>: Execution notebooks utilizing LLM2Vec methodology.</li>
+                <li><strong className="text-yellow-300">w2v/ & bert/</strong>: Baseline execution notebooks.</li>
+                <li><strong className="text-yellow-300">tools/</strong>: Utility scripts for calculating bias and manipulating models.</li>
+                <li><strong className="text-yellow-300">datasets/</strong>: Datasets containing protected attributes and professions.</li>
+                <li><strong className="text-yellow-300">Results/</strong>: Generated logs, tables, and visualization plots.</li>
               </ul>
             </div>
           </div>
@@ -174,15 +174,15 @@ export default function ThesisPage() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-3xl font-bold text-white flex items-center">
-                <span className="text-cyan-400 mr-3">04.</span> Usage
+                <span className="text-yellow-400 mr-3">04.</span> Usage
               </h2>
-              <div className="h-1 w-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full"></div>
+              <div className="h-1 w-20 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full"></div>
             </div>
             
             <div className="space-y-4">
               <p className="text-slate-400 text-sm">Install dependencies and run experiments using Jupyter notebooks.</p>
               
-              <div className="bg-slate-950 border border-slate-800 rounded-xl p-4 font-mono text-sm text-cyan-400 overflow-x-auto">
+              <div className="bg-slate-950 border border-slate-800 rounded-xl p-4 font-mono text-sm text-yellow-400 overflow-x-auto">
                 <p className="text-slate-500 mb-1"># Install dependencies</p>
                 <p>pip install -r requirements.txt</p>
                 <br/>

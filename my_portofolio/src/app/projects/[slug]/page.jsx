@@ -20,7 +20,7 @@ export default async function ProjectDetailsPage({ params }) {
         
         {/* Back Navigation */}
         <nav>
-          <Link href="/projects" className="inline-flex items-center text-sm font-medium text-slate-400 hover:text-cyan-400 transition-colors group">
+          <Link href="/projects" className="inline-flex items-center text-sm font-medium text-slate-400 hover:text-yellow-400 transition-colors group">
             <ChevronLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />
             Back to Projects
           </Link>
@@ -39,7 +39,7 @@ export default async function ProjectDetailsPage({ params }) {
           
           <div className="flex flex-wrap gap-2 pt-2">
             {project.tags.map(tag => (
-              <span key={tag} className="px-3 py-1 text-sm font-medium text-cyan-300 bg-cyan-950/50 border border-cyan-900/50 rounded-full shadow-sm">
+              <span key={tag} className="px-3 py-1 text-sm font-medium text-yellow-400 bg-yellow-950/40 border border-yellow-900/50 rounded-full shadow-sm">
                 {tag}
               </span>
             ))}
@@ -63,7 +63,7 @@ export default async function ProjectDetailsPage({ params }) {
         {/* Links */}
         <section className="flex flex-wrap gap-4 pt-8 border-t border-slate-800/80">
           {project.githubLink && (
-            <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 font-semibold text-slate-900 bg-cyan-400 rounded-xl hover:bg-cyan-300 transition-colors shadow-lg shadow-cyan-900/20">
+            <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 font-semibold text-slate-900 bg-yellow-400 rounded-xl hover:bg-yellow-300 transition-colors shadow-lg shadow-yellow-900/20">
               <GithubIcon className="w-5 h-5 mr-2" />
               View Repository
             </a>

@@ -21,7 +21,7 @@ export default function ProjectsPage() {
             <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
               All Projects
             </h1>
-            <div className="h-1 w-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full"></div>
+            <div className="h-1 w-20 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full"></div>
             <p className="text-xl text-slate-400 max-w-4xl leading-relaxed pt-4">
               A comprehensive collection of my software engineering and machine learning projects.
             </p>
