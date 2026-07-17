@@ -1,5 +1,10 @@
 # Alexandros Milonakis - Portfolio
 
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+
 Welcome to the source code of my personal portfolio and professional website.
 
 This portfolio is built to showcase my experience, projects, and academic research in **Artificial Intelligence, Machine Learning, and Software Engineering**. It features a modern, glassmorphic UI, responsive design, and dynamic background animations.
