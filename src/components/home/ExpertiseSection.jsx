@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import ExpertiseCard from '../ExpertiseCard';
 import { 

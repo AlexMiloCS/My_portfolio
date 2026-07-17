@@ -1,10 +1,18 @@
+"use client";
+import { useState } from 'react';
+
 export default function ExpertiseCard({ icon, title, description, skills, philosophy }) {
+  const [isFlipped, setIsFlipped] = useState(false);
+
   return (
-    <div className="group relative h-[280px] w-full [perspective:1000px] cursor-pointer">
-      <div className="absolute inset-0 w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div 
+      className="group relative h-[280px] w-full [perspective:1000px] cursor-pointer"
+      onClick={() => setIsFlipped(!isFlipped)}
+    >
+      <div className={`absolute inset-0 w-full h-full transition-transform duration-700 [transform-style:preserve-3d] ${isFlipped ? '[transform:rotateY(180deg)]' : ''}`}>
         
         {/* FRONT FACE */}
-        <div className="absolute inset-0 w-full h-full p-6 rounded-2xl bg-slate-900/50 border border-slate-800 group-hover:border-orange-400/50 transition-all duration-300 group-hover:shadow-[0_0_30px_-5px_rgba(251,146,60,0.15)] [backface-visibility:hidden] overflow-hidden">
+        <div className={`absolute inset-0 w-full h-full p-6 rounded-2xl bg-slate-900/50 border transition-all duration-300 [backface-visibility:hidden] overflow-hidden group-hover:border-orange-400/50 group-hover:shadow-[0_0_30px_-5px_rgba(251,146,60,0.15)] ${isFlipped ? 'border-orange-400/50 shadow-[0_0_30px_-5px_rgba(251,146,60,0.15)]' : 'border-slate-800'}`}>
           <div className="absolute top-0 right-0 p-4 opacity-10 transition-opacity transform translate-x-4 -translate-y-4 duration-500">
             {icon}
           </div>

@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col bg-slate-950 text-slate-200 relative">
         {/* Global Background Neural Network */}
-        <div className="fixed inset-0 w-screen h-screen opacity-100 pointer-events-none z-0 overflow-hidden">
+        <div className="fixed inset-0 w-screen h-screen opacity-10 md:opacity-100 pointer-events-none z-0 overflow-hidden">
           <NeuralNet />
         </div>
 
