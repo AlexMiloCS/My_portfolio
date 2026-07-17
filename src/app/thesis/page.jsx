@@ -60,15 +60,21 @@ export default function ThesisPage() {
             ))}
           </div>
           
-          <div className="pt-6 border-t border-slate-800/80 flex flex-wrap gap-4">
-            <a href="https://github.com/AlexMiloCS/LLM2Vec_Thesis" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 font-semibold text-slate-900 bg-yellow-400 rounded-xl hover:bg-yellow-300 transition-colors hover:shadow-[0_0_20px_-5px_rgba(250,204,21,0.5)]">
-              <GithubIcon className="w-5 h-5 mr-2" />
-              View Repository
-            </a>
-            <a href="https://drive.google.com/file/d/1Ox2Sha6hJOS81iheE2R1E8Uu5AfhlcGa/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 font-semibold text-white bg-slate-800 rounded-xl hover:bg-slate-700 transition-colors border border-slate-700">
-              <BookOpen className="w-5 h-5 mr-2 text-yellow-400" />
-              Read Full Thesis (Greek PDF)
-            </a>
+          <div className="pt-6 border-t border-slate-800/80 flex flex-col gap-2">
+            <div className="flex flex-wrap gap-4">
+              <a href="https://github.com/AlexMiloCS/LLM2Vec_Thesis" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 font-semibold text-slate-900 bg-yellow-400 rounded-xl hover:bg-yellow-300 transition-colors hover:shadow-[0_0_20px_-5px_rgba(250,204,21,0.5)]">
+                <GithubIcon className="w-5 h-5 mr-2" />
+                View Repository
+              </a>
+              <a href="https://drive.google.com/file/d/1Ox2Sha6hJOS81iheE2R1E8Uu5AfhlcGa/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 font-semibold text-white bg-slate-800 rounded-xl hover:bg-slate-700 transition-colors border border-slate-700">
+                <BookOpen className="w-5 h-5 mr-2 text-yellow-400" />
+                <span>Read Full Thesis (Greek PDF)<span className="text-yellow-400 ml-1 font-bold">*</span></span>
+              </a>
+            </div>
+            <p className="text-[11px] text-slate-500 font-medium pl-1">
+              <span className="text-yellow-400/70 mr-1">*</span> 
+              Preview securely routed via Google Drive
+            </p>
           </div>
         </section>
 

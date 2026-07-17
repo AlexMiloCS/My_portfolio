@@ -94,7 +94,7 @@ export default function Topbar() {
                 className="flex items-center justify-center gap-3 p-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-medium transition-colors border border-slate-700 hover:border-yellow-400/50"
               >
                 <ExternalLink className="w-5 h-5 text-yellow-400" />
-                Open in Browser
+                <span>Open in Browser<span className="text-yellow-400 ml-1 font-bold">*</span></span>
               </a>
               <a 
                 href="https://github.com/AlexMiloCS/My_portfolio/releases/download/v1.0/Alex_Mil_CV_en.pdf"
@@ -107,6 +107,10 @@ export default function Topbar() {
                 Download PDF
               </a>
             </div>
+            <p className="mt-5 text-center text-[11px] text-slate-500 font-medium">
+              <span className="text-yellow-400/70 mr-1">*</span> 
+              Browser preview securely routed via Google Drive
+            </p>
           </div>
         </div>
       )}
