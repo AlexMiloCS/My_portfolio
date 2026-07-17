@@ -9,7 +9,7 @@ Welcome to the source code of my personal portfolio and professional website.
 
 This portfolio is built to showcase my experience, projects, and academic research in **Artificial Intelligence, Machine Learning, and Software Engineering**. It features a modern, glassmorphic UI, responsive design, and dynamic background animations.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 This project is built using modern web development tools:
 
@@ -21,7 +21,7 @@ This project is built using modern web development tools:
   - [Simple Icons](https://simpleicons.org/) (Brand & tech icons)
 - **Deployment:** Vercel (Recommended)
 
-## ✨ Features
+## Features
 
 - **Animated Neural Network Background:** A custom-built, lightweight SVG animation (`NeuralNet.jsx`) simulating data flow through network layers.
 - **Component-Driven Architecture:** Cleanly abstracted UI components (`HeroSection`, `ExpertiseSection`, `ProjectCard`, etc.).
@@ -29,7 +29,7 @@ This project is built using modern web development tools:
 - **Responsive Design:** Fully responsive layouts that look great on both mobile devices and large desktop monitors.
 - **Glassmorphism UI:** Heavy use of Tailwind's backdrop-blur and semi-transparent colors for a premium feel.
 
-## 📦 Getting Started
+##  Getting Started
 
 To run this project locally on your machine, follow these steps:
 
@@ -58,7 +58,7 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 4. **View the app:**
    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 📂 Project Structure
+##  Project Structure
 
 - `src/app/`: Next.js App Router pages (`/`, `/projects`, `/thesis`, `/contact`, `/work_experience`).
 - `src/components/`: Reusable UI components.
@@ -66,7 +66,7 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 - `src/data/`: Static data files containing project information and work history.
 - `public/`: Static assets like images and PDFs.
 
-## 🤝 Contact & Networking
+##  Contact & Networking
 
 If you are a recruiter, engineer, or researcher looking to collaborate, feel free to reach out:
 - **Email:** alexmilcs@gmail.com
