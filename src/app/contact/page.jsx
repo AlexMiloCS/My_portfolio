@@ -85,7 +85,7 @@ export default function ContactPage() {
                 Open in Browser
               </a>
               <a 
-                href="https://drive.google.com/uc?export=download&id=1XNfztoPkdDrrSUt0cUpBM969LAob0hiY"
+                href="https://github.com/AlexMiloCS/My_portfolio/releases/download/v1.0/Alex_Mil_CV_en.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsResumeModalOpen(false)}
