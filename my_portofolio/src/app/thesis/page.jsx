@@ -1,9 +1,9 @@
 import React from 'react';
-import { Cpu, ChevronRight, ChevronLeft, BookOpen, Code, Scale, Image as ImageIcon } from 'lucide-react';
+import { Cpu, ChevronRight, ChevronLeft, BookOpen, Code, Scale } from 'lucide-react';
 import { GithubIcon } from '../../components/Icons';
 import Link from 'next/link';
-import FindingCard from '../../components/thesis/FindingCard';
-import ThesisImageCard from '../../components/thesis/ThesisImageCard';
+import FindingCard from './components/FindingCard';
+import ThesisImageCard from './components/ThesisImageCard';
 
 export default function ThesisPage() {
   return (

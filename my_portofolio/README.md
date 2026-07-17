@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alexandros Milonakis - Portfolio
 
-## Getting Started
+Welcome to the source code of my personal portfolio and professional website.
 
-First, run the development server:
+This portfolio is built to showcase my experience, projects, and academic research in **Artificial Intelligence, Machine Learning, and Software Engineering**. It features a modern, glassmorphic UI, responsive design, and dynamic background animations.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project is built using modern web development tools:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework:** [Next.js](https://nextjs.org/) (App Router)
+- **Library:** [React](https://react.dev/) 19
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) v4
+- **Icons:** 
+  - [Lucide React](https://lucide.dev/) (UI icons)
+  - [Simple Icons](https://simpleicons.org/) (Brand & tech icons)
+- **Deployment:** Vercel (Recommended)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Features
 
-## Learn More
+- **Animated Neural Network Background:** A custom-built, lightweight SVG animation (`NeuralNet.jsx`) simulating data flow through network layers.
+- **Component-Driven Architecture:** Cleanly abstracted UI components (`HeroSection`, `ExpertiseSection`, `ProjectCard`, etc.).
+- **Dynamic Content:** Projects and experience are mapped from a local JSON-like data structure, making it easy to add new achievements.
+- **Responsive Design:** Fully responsive layouts that look great on both mobile devices and large desktop monitors.
+- **Glassmorphism UI:** Heavy use of Tailwind's backdrop-blur and semi-transparent colors for a premium feel.
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To run this project locally on your machine, follow these steps:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Prerequisites
 
-## Deploy on Vercel
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Installation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/AlexMiloCS/my_portfolio.git
+   cd my_portfolio
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **View the app:**
+   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## 📂 Project Structure
+
+- `src/app/`: Next.js App Router pages (`/`, `/projects`, `/thesis`, `/contact`, `/work_experience`).
+- `src/components/`: Reusable UI components.
+  - `home/`: Components specifically abstracted for the main landing page.
+- `src/data/`: Static data files containing project information and work history.
+- `public/`: Static assets like images and PDFs.
+
+## 🤝 Contact & Networking
+
+If you are a recruiter, engineer, or researcher looking to collaborate, feel free to reach out:
+- **Email:** alexmilcs@gmail.com
+- **LinkedIn:** [Alexandros Milonakis](https://linkedin.com/in/alexandros-milonakis)
+- **GitHub:** [AlexMiloCS](https://github.com/AlexMiloCS)
+
+---
+*Designed and built by Alexandros Milonakis.*

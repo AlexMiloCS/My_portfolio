@@ -7,7 +7,7 @@ export default function Topbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
       <div className="max-w-6xl mx-auto px-6 h-20 relative flex items-center justify-between md:justify-center">
         <Link href="/" className="md:absolute md:left-6 text-xl font-bold text-white tracking-tighter hover:text-yellow-400 transition-colors flex items-center">
-          <span className="text-yellow-400 mr-1 italic">//</span>AM
+          <span className="text-yellow-400 mr-1 italic">{'//'}</span>AM
         </Link>
         
         <nav className="hidden md:flex items-center space-x-8">

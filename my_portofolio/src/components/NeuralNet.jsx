@@ -1,16 +1,16 @@
 "use client";
 import React, { useState, useEffect, useCallback } from 'react';
 
-export default function NeuralNet() {
-  const layers = [
-    [300, 500, 700],           // Input layer
-    [200, 400, 600, 800],      // Hidden layer 1
-    [200, 400, 600, 800],      // Hidden layer 2
-    [400, 600]                 // Output layer
-  ];
-  const xs = [200, 600, 1000, 1400];
-  const duration = 1.2; // 1.2s per segment for a slower, calmer bolt
+const layers = [
+  [300, 500, 700],           // Input layer
+  [200, 400, 600, 800],      // Hidden layer 1
+  [200, 400, 600, 800],      // Hidden layer 2
+  [400, 600]                 // Output layer
+];
+const xs = [200, 600, 1000, 1400];
+const duration = 1.2; // 1.2s per segment for a slower, calmer bolt
 
+export default function NeuralNet() {
   const [activePaths, setActivePaths] = useState([]);
 
   const fireBolt = useCallback(() => {
@@ -42,37 +42,27 @@ export default function NeuralNet() {
     setTimeout(() => {
       setActivePaths(prev => prev.filter(p => p.id !== id));
     }, duration * 4000);
-  }, [layers]);
+  }, []);
 
   useEffect(() => {
-    // Fire initial bolt
-    fireBolt();
+    // Fire initial bolt after a tiny delay to prevent cascading renders
+    const initialTimeout = setTimeout(() => {
+      fireBolt();
+    }, 100);
 
     const interval = setInterval(() => {
       // Fire exactly 1 bolt per interval
       fireBolt();
     }, 6000); // Wait long enough for the previous bolt to finish
 
-    return () => clearInterval(interval);
+    return () => {
+      clearTimeout(initialTimeout);
+      clearInterval(interval);
+    };
   }, [fireBolt]);
 
   return (
     <>
-      <style>
-        {`
-          @keyframes runBolt {
-            0% { stroke-dashoffset: 40; opacity: 0; }
-            10% { opacity: 0.5; }
-            90% { opacity: 0.5; }
-            100% { stroke-dashoffset: -100; opacity: 0; }
-          }
-          @keyframes nodeGlow {
-            0% { opacity: 0; r: 12px; }
-            20% { opacity: 0.4; r: 18px; }
-            100% { opacity: 0; r: 12px; }
-          }
-        `}
-      </style>
       <svg className="w-full h-full" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
         
         {/* Draw base edges */}

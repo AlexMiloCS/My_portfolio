@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Mail, ChevronRight, FileDown } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../../components/Icons';
+import ContactCard from '../../components/ContactCard';
 
 export default function ContactPage() {
   return (
@@ -58,23 +59,4 @@ export default function ContactPage() {
   );
 }
 
-function ContactCard({ href, icon, title, subtitle }) {
-  return (
-    <a 
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group flex flex-col items-center justify-center p-8 text-center rounded-2xl bg-slate-900/40 border border-slate-800 hover:border-yellow-400/50 hover:bg-slate-900 transition-all duration-300 hover:shadow-[0_0_30px_-5px_rgba(250,204,21,0.15)] hover:-translate-y-1"
-    >
-      <div className="mb-6 p-4 bg-slate-950 rounded-full border border-slate-800 group-hover:scale-110 transition-transform duration-500 shadow-inner">
-        {icon}
-      </div>
-      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">
-        {title}
-      </h3>
-      <p className="text-slate-400 text-sm">
-        {subtitle}
-      </p>
-    </a>
-  );
-}
+

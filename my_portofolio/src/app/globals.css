@@ -24,3 +24,16 @@ body {
 .animate-blink {
   animation: blink 1s step-end infinite;
 }
+
+@keyframes runBolt {
+  0% { stroke-dashoffset: 40; opacity: 0; }
+  10% { opacity: 0.5; }
+  90% { opacity: 0.5; }
+  100% { stroke-dashoffset: -100; opacity: 0; }
+}
+
+@keyframes nodeGlow {
+  0% { opacity: 0; r: 12px; }
+  20% { opacity: 0.4; r: 18px; }
+  100% { opacity: 0; r: 12px; }
+}
