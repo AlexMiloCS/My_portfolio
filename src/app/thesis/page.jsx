@@ -65,7 +65,7 @@ export default function ThesisPage() {
               <GithubIcon className="w-5 h-5 mr-2" />
               View Repository
             </a>
-            <a href="/thesis/Thesis_final.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 font-semibold text-white bg-slate-800 rounded-xl hover:bg-slate-700 transition-colors border border-slate-700">
+            <a href="https://drive.google.com/file/d/1Ox2Sha6hJOS81iheE2R1E8Uu5AfhlcGa/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 font-semibold text-white bg-slate-800 rounded-xl hover:bg-slate-700 transition-colors border border-slate-700">
               <BookOpen className="w-5 h-5 mr-2 text-yellow-400" />
               Read Full Thesis (Greek PDF)
             </a>
@@ -140,7 +140,7 @@ export default function ThesisPage() {
           <div className="grid grid-cols-1 gap-8">
             <div id="pca-graph" className="scroll-mt-32">
               <ThesisImageCard 
-                src="/thesis/mean_pca_avg.png"
+                src="https://res.cloudinary.com/zfs5luyr/image/upload/v1784297144/mean_pca_avg_s8yrjg.png"
                 alt="Comparison of mean Direct Bias by axis construction method"
                 title="Comparison of Axis Construction Methods"
                 description={<><strong>Figure 5.1:</strong> Comparison of mean Direct Bias per axis construction method exclusively for explicitly gendered categories (Male, Female). The he-she method (green bar) demonstrates a significantly reduced capacity to project gender information compared to distributional methods (Mean, PCA).</>}
@@ -148,7 +148,7 @@ export default function ThesisPage() {
             </div>
             <div id="figure-6.1" className="scroll-mt-32">
               <ThesisImageCard 
-                src="/thesis/bias_comparison_clean.png"
+                src="https://res.cloudinary.com/zfs5luyr/image/upload/v1784297145/bias_comparison_clean_wwovfl.png"
                 alt="Comparative bar chart of Direct Bias"
                 title="Comparative Analysis of Bias across Training Stages"
                 description={<><strong>Figure 6.1:</strong> Comparative bar chart of Direct Bias in Neutral Occupations across the three training stages (MNTP, Unsupervised SimCSE, Supervised SimCSE). We observe that while the Unsupervised stage (orange) often offers an improvement over MNTP (red), the Supervised strategy (blue) systematically achieves the optimal bias reduction across most models.</>}
@@ -156,7 +156,7 @@ export default function ThesisPage() {
             </div>
             <div id="figure-7.4" className="scroll-mt-32">
               <ThesisImageCard 
-                src="/thesis/directional_bias_polarity_dot.png"
+                src="https://res.cloudinary.com/zfs5luyr/image/upload/v1784297145/directional_bias_polarity_dot_ouibne.png"
                 alt="Polarity Analysis and Creation of Gender Dipole"
                 title="Polarity Analysis and Creation of Gender Dipole"
                 description={<><strong>Figure 7.4:</strong> Polarity Analysis and Creation of Gender Dipole (Directional Bias). The graph depicts the direction and position of the categories on the axis. BERT exhibits complete asymmetry (all points negative), whereas LLM2Vec models construct a robust semantic dipole (red on the left, blue on the right), concentrating neutral concepts (grey) very close to the absolute center (0.0).</>}
@@ -164,7 +164,7 @@ export default function ThesisPage() {
             </div>
             <div id="figure-7.6" className="scroll-mt-32">
               <ThesisImageCard 
-                src="/thesis/Neutral Gender Bias PCA.png"
+                src="https://res.cloudinary.com/zfs5luyr/image/upload/v1784297145/Neutral_Gender_Bias_PCA_xecaw9.png"
                 alt="Stereotype Analysis in Neutral Sentences"
                 title="Stereotype Analysis in Neutral Sentences"
                 description={<><strong>Figure 7.6:</strong> Stereotype Analysis in Neutral Sentences. Dispersion of PCA values for neutral occupations. Occupations were ranked based on the average LLM scores. Overlaying the values for BERT and Word2Vec highlights the differences in stereotype encoding, as well as the common tendency of models to assign negative (female) values to specific occupations (e.g., nurse, housekeeper).</>}
@@ -172,7 +172,7 @@ export default function ThesisPage() {
             </div>
             <div id="figure-8.1" className="scroll-mt-32">
               <ThesisImageCard 
-                src="/thesis/architecture_size_impact.png"
+                src="https://res.cloudinary.com/zfs5luyr/image/upload/v1784297145/architecture_size_impact_umjlie.png"
                 alt="Impact of Size and Architecture on Gender Bias"
                 title="Impact of Size and Architecture on Gender Bias"
                 description={<><strong>Figure 8.1:</strong> Comparative visualization of Direct Bias (PCA) for Neutral, Male, and Female categories across models of different sizes (1.3B to 8.1B). Observations: (1) The Female category (red) consistently shows a higher value regardless of size, indicating strong encoding. (2) The Sheared-LLaMA-1.3B model achieves lower Neutral Bias than larger models (e.g., Llama-3.2), highlighting the importance of structural optimization (pruning) over the absolute number of parameters.</>}

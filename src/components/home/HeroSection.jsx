@@ -30,7 +30,7 @@ export default function HeroSection() {
       <div className="flex-shrink-0 w-64 h-64 md:w-80 md:h-80 relative mt-8 md:mt-0 z-10">
         <div className="absolute inset-2 rounded-full overflow-hidden border-4 border-slate-800 shadow-2xl bg-slate-900">
           <Image
-            src="/profile_picture.jpg" 
+            src="https://res.cloudinary.com/zfs5luyr/image/upload/v1784297410/profile_picture_w38zof.jpg" 
             alt="Alexandros Milonakis"
             fill
             priority

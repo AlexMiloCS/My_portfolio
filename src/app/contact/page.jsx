@@ -75,7 +75,7 @@ export default function ContactPage() {
             
             <div className="flex flex-col gap-4">
               <a 
-                href="/Alex_Mil_CV_en.pdf"
+                href="https://drive.google.com/file/d/1XNfztoPkdDrrSUt0cUpBM969LAob0hiY/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsResumeModalOpen(false)}
@@ -85,7 +85,7 @@ export default function ContactPage() {
                 Open in Browser
               </a>
               <a 
-                href="/Alex_Mil_CV_en.pdf"
+                href="https://drive.google.com/uc?export=download&id=1XNfztoPkdDrrSUt0cUpBM969LAob0hiY"
                 download
                 onClick={() => setIsResumeModalOpen(false)}
                 className="flex items-center justify-center gap-3 p-4 rounded-xl bg-yellow-500 hover:bg-yellow-400 text-slate-950 font-bold transition-colors"
