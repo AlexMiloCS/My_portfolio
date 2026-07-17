@@ -68,7 +68,8 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 - `src/components/`: Reusable UI components.
   - `home/`: Components specifically abstracted for the main landing page.
 - `src/data/`: Static data files containing project information and work history.
-- `public/`: Static assets like images and PDFs.
+- `public/`: General static assets (e.g., SVG icons). 
+  - *Note: Personal assets like CVs and profile pictures are deliberately excluded from this public repository and are instead hosted externally via Cloudinary and Google Drive to protect personal data.*
 
 ##  Contact & Networking
 
