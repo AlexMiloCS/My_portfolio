@@ -1,7 +1,20 @@
-import { Database, Terminal, Map, ScatterChart, Calculator, Lock } from 'lucide-react';
+import { Database, Terminal, Map, ScatterChart, Calculator, Lock, Globe } from 'lucide-react';
 import React from 'react';
 
 export const projects = [
+  {
+    slug: 'portfolio-website',
+    category: 'personal',
+    featured: false,
+    title: 'Personal Portfolio & Professional Website',
+    description: 'Designed and built from scratch using Next.js 14 and Tailwind CSS v4. Features a responsive glassmorphic UI, dynamic project routing, and a custom interactive neural network background.',
+    fullDescription: 'This portfolio is a custom-built web application designed to showcase my academic research and software engineering projects. It was engineered from scratch using Next.js (App Router) and React 19, styled with Tailwind CSS for a premium glassmorphic aesthetic. Key technical features include a dynamic, lightweight SVG animation simulating a neural network, a component-driven architecture for easy scalability, and responsive layouts for mobile and desktop environments.',
+    tags: ['Next.js', 'React', 'Tailwind CSS', 'Frontend'],
+    githubLink: 'https://github.com/AlexMiloCS/My_portfolio',
+    imagePlaceholder: 'bg-gradient-to-br from-indigo-900/40 to-slate-900',
+    iconColorClass: 'text-indigo-400',
+    icon: <Globe className="w-8 h-8 text-slate-400 group-hover:text-indigo-400 transition-colors" />
+  },
   {
     slug: 'food-hazard-nlp',
     category: 'academic',

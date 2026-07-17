@@ -1,11 +1,17 @@
 "use client";
 import React, { useState } from 'react';
 
-export default function ContactCard({ href, icon, title, subtitle }) {
+export default function ContactCard({ href, icon, title, subtitle, onClick }) {
   const [copied, setCopied] = useState(false);
   const isMailTo = href?.startsWith('mailto:');
 
   const handleClick = async (e) => {
+    if (onClick) {
+      e.preventDefault();
+      onClick(e);
+      return;
+    }
+    
     if (isMailTo) {
       e.preventDefault();
       const email = href.replace('mailto:', '');
@@ -21,10 +27,10 @@ export default function ContactCard({ href, icon, title, subtitle }) {
 
   return (
     <a 
-      href={href}
+      href={href || "#"}
       onClick={handleClick}
-      target={isMailTo ? undefined : "_blank"}
-      rel={isMailTo ? undefined : "noopener noreferrer"}
+      target={isMailTo || onClick ? undefined : "_blank"}
+      rel={isMailTo || onClick ? undefined : "noopener noreferrer"}
       className="group flex flex-col items-center justify-center p-8 text-center rounded-2xl bg-slate-900/40 border border-slate-800 hover:border-yellow-400/50 hover:bg-slate-900 transition-all duration-300 hover:shadow-[0_0_30px_-5px_rgba(250,204,21,0.15)] hover:-translate-y-1 cursor-pointer relative"
     >
       <div className="mb-6 p-4 bg-slate-950 rounded-full border border-slate-800 group-hover:scale-110 transition-transform duration-500 shadow-inner">

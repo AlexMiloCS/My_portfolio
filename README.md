@@ -21,6 +21,10 @@ This project is built using modern web development tools:
   - [Simple Icons](https://simpleicons.org/) (Brand & tech icons)
 - **Deployment:** Vercel (Recommended)
 
+## AI Methodology & Tools
+
+This project was engineered using Next.js and Tailwind CSS. To accelerate development, boilerplate generation, and UI ideation, I utilized Antigravity IDE powered by the Gemini 3.1 Pro model, demonstrating modern AI-assisted software engineering workflows.
+
 ## Features
 
 - **Animated Neural Network Background:** A custom-built, lightweight SVG animation (`NeuralNet.jsx`) simulating data flow through network layers.
