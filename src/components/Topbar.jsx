@@ -14,7 +14,7 @@ export default function Topbar() {
           <NavLink href="/work_experience">Work Experience</NavLink>
           <NavLink href="/projects">Projects</NavLink>
           <NavLink href="/contact">Contact Me</NavLink>
-          <NavLink href="/Alex_Mil_CV_en.pdf" target="_blank" rel="noopener noreferrer">Resume</NavLink>
+          <NavLink href="https://drive.google.com/file/d/1XNfztoPkdDrrSUt0cUpBM969LAob0hiY/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</NavLink>
         </nav>
 
         <Link href="/" className="hidden md:flex md:absolute md:right-6 text-slate-400 hover:text-yellow-400 transition-colors" aria-label="Home">
