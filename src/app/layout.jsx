@@ -68,7 +68,7 @@ export default function RootLayout({ children }) {
               <div className="flex items-center justify-center md:justify-end space-x-4 w-full md:w-1/3">
                 <SocialLink href="mailto:alexmilcs@gmail.com" icon={<Mail className="w-5 h-5" />} label="Email" />
                 <SocialLink href="https://github.com/AlexMiloCS" icon={<GithubIcon className="w-5 h-5" />} label="GitHub" />
-                <SocialLink href="https://www.linkedin.com/in/alexandros-milonakis-42651127a/" icon={<LinkedinIcon className="w-5 h-5" />} label="LinkedIn" />
+                <SocialLink href="https://www.linkedin.com/in/alexandros-mylonakis-42651127a/" icon={<LinkedinIcon className="w-5 h-5" />} label="LinkedIn" />
               </div>
             </div>
           </footer>

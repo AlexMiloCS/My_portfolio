@@ -75,7 +75,7 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
 If you are a recruiter, engineer, or researcher looking to collaborate, feel free to reach out:
 - **Email:** alexmilcs@gmail.com
-- **LinkedIn:** [Alexandros Mylonakis](https://linkedin.com/in/alexandros-milonakis)
+- **LinkedIn:** [Alexandros Mylonakis](https://www.linkedin.com/in/alexandros-mylonakis-42651127a/)
 - **GitHub:** [AlexMiloCS](https://github.com/AlexMiloCS)
 
 ---

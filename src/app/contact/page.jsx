@@ -36,7 +36,7 @@ export default function ContactPage() {
             subtitle="alexmilcs@gmail.com"
           />
           <ContactCard 
-            href="https://www.linkedin.com/in/alexandros-milonakis-42651127a/"
+            href="https://www.linkedin.com/in/alexandros-mylonakis-42651127a/"
             icon={<LinkedinIcon className="w-8 h-8 text-blue-400" />}
             title="LinkedIn"
             subtitle="Let's connect professionally"
