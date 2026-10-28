@@ -17,8 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Alexandros Milonakis | AI Engineer",
-  description: "Portfolio of Alexandros Milonakis, Software Engineer specializing in AI & Machine Learning.",
+  title: "Alexandros Mylonakis | AI Engineer",
+  description: "Portfolio of Alexandros Mylonakis, Software Engineer specializing in AI & Machine Learning.",
+  keywords: ["Milonakis"],
 };
 
 export default function RootLayout({ children }) {
@@ -44,7 +45,7 @@ export default function RootLayout({ children }) {
             <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
               {/* Left: Copyright */}
               <div className="text-sm text-slate-500 w-full md:w-1/3 text-center md:text-left">
-                &copy; {new Date().getFullYear()} Alexandros Milonakis
+                &copy; {new Date().getFullYear()} Alexandros Mylonakis
               </div>
               
               {/* Center: Tech Stack */}

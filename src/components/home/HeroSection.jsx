@@ -10,7 +10,7 @@ export default function HeroSection() {
             Hello, I'm
           </h2>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white">
-            Alexandros Milonakis.
+            Alexandros Mylonakis.
           </h1>
         </div>
         
@@ -31,7 +31,7 @@ export default function HeroSection() {
         <div className="absolute inset-2 rounded-full overflow-hidden border-4 border-slate-800 shadow-2xl bg-slate-900">
           <Image
             src="https://res.cloudinary.com/zfs5luyr/image/upload/v1784297410/profile_picture_w38zof.jpg" 
-            alt="Alexandros Milonakis"
+            alt="Alexandros Mylonakis"
             fill
             priority
             className="object-cover transition-transform duration-700 hover:scale-105"

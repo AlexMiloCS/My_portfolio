@@ -1,4 +1,4 @@
-# Alexandros Milonakis - Portfolio
+# Alexandros Mylonakis - Portfolio
 
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
@@ -75,8 +75,8 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
 If you are a recruiter, engineer, or researcher looking to collaborate, feel free to reach out:
 - **Email:** alexmilcs@gmail.com
-- **LinkedIn:** [Alexandros Milonakis](https://linkedin.com/in/alexandros-milonakis)
+- **LinkedIn:** [Alexandros Mylonakis](https://linkedin.com/in/alexandros-milonakis)
 - **GitHub:** [AlexMiloCS](https://github.com/AlexMiloCS)
 
 ---
-*Designed and built by Alexandros Milonakis.*
+*Designed and built by Alexandros Mylonakis.*
