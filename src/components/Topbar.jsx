@@ -1,10 +1,9 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Home, X, ExternalLink, Download, Menu } from 'lucide-react';
+import { Home, X, Menu } from 'lucide-react';
 
 export default function Topbar() {
-  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Prevent scrolling when mobile menu is open
@@ -31,7 +30,7 @@ export default function Topbar() {
           <NavLink href="/work_experience">Work Experience</NavLink>
           <NavLink href="/projects">Projects</NavLink>
           <NavLink href="/contact">Contact Me</NavLink>
-          <NavButton onClick={() => setIsResumeModalOpen(true)}>Resume</NavButton>
+          <NavLink href="/resume">Resume</NavLink>
         </nav>
 
         <Link href="/" className="hidden md:flex md:absolute md:right-6 text-slate-400 hover:text-yellow-400 transition-colors" aria-label="Home">
@@ -60,58 +59,7 @@ export default function Topbar() {
           <Link href="/work_experience" onClick={() => setIsMobileMenuOpen(false)} className="relative z-10 text-2xl font-semibold tracking-wide text-slate-200 hover:text-yellow-400 transition-all active:scale-95">Work Experience</Link>
           <Link href="/projects" onClick={() => setIsMobileMenuOpen(false)} className="relative z-10 text-2xl font-semibold tracking-wide text-slate-200 hover:text-yellow-400 transition-all active:scale-95">Projects</Link>
           <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="relative z-10 text-2xl font-semibold tracking-wide text-slate-200 hover:text-yellow-400 transition-all active:scale-95">Contact Me</Link>
-          <button 
-            onClick={() => {
-              setIsMobileMenuOpen(false);
-              setIsResumeModalOpen(true);
-            }}
-            className="relative z-10 text-2xl font-semibold tracking-wide text-slate-200 hover:text-yellow-400 transition-all active:scale-95"
-          >
-            Resume
-          </button>
-        </div>
-      )}
-
-      {/* RESUME MODAL */}
-      {isResumeModalOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/80 backdrop-blur-md p-4 animate-in fade-in duration-300">
-          <div className="bg-slate-900 border border-slate-800 p-8 rounded-2xl max-w-sm w-full shadow-2xl relative">
-            <button 
-              onClick={() => setIsResumeModalOpen(false)}
-              className="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors"
-            >
-              <X className="w-5 h-5" />
-            </button>
-            <h3 className="text-2xl font-bold text-white mb-2 text-center">Resume</h3>
-            <p className="text-slate-400 text-center mb-8 text-sm">How would you like to view my resume?</p>
-            
-            <div className="flex flex-col gap-4">
-              <a 
-                href="https://drive.google.com/file/d/1XNfztoPkdDrrSUt0cUpBM969LAob0hiY/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setIsResumeModalOpen(false)}
-                className="flex items-center justify-center gap-3 p-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-medium transition-colors border border-slate-700 hover:border-yellow-400/50"
-              >
-                <ExternalLink className="w-5 h-5 text-yellow-400" />
-                <span>Open in Browser<span className="text-yellow-400 ml-1 font-bold">*</span></span>
-              </a>
-              <a 
-                href="https://github.com/AlexMiloCS/My_portfolio/releases/download/v1.0/Alex_Mil_CV_en.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setIsResumeModalOpen(false)}
-                className="flex items-center justify-center gap-3 p-4 rounded-xl bg-yellow-500 hover:bg-yellow-400 text-slate-950 font-bold transition-colors"
-              >
-                <Download className="w-5 h-5" />
-                Download PDF
-              </a>
-            </div>
-            <p className="mt-5 text-center text-[11px] text-slate-500 font-medium">
-              <span className="text-yellow-400/70 mr-1">*</span> 
-              Browser preview securely routed via Google Drive
-            </p>
-          </div>
+          <Link href="/resume" onClick={() => setIsMobileMenuOpen(false)} className="relative z-10 text-2xl font-semibold tracking-wide text-slate-200 hover:text-yellow-400 transition-all active:scale-95">Resume</Link>
         </div>
       )}
     </>
@@ -128,17 +76,5 @@ function NavLink({ href, children, ...props }) {
       {children}
       <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
     </Link>
-  );
-}
-
-function NavButton({ onClick, children }) {
-  return (
-    <button 
-      onClick={onClick}
-      className="text-sm font-medium text-slate-400 hover:text-yellow-400 transition-colors relative group"
-    >
-      {children}
-      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
-    </button>
   );
 }
