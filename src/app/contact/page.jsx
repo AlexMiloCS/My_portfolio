@@ -26,7 +26,7 @@ export default function ContactPage() {
           </h1>
           <div className="h-1 w-20 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full"></div>
           <p className="text-xl text-slate-400 max-w-2xl leading-relaxed pt-4">
-            I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+            I'm currently working as an AI Engineer and open to interesting conversations and collaborations. Whether you have a question or just want to say hi, I'll try my best to get back to you!
           </p>
         </section>
 
